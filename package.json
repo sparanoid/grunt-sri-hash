@@ -1,14 +1,13 @@
 {
   "name": "grunt-sri-hash",
-  "description": "A grunt task which hashes all inlined scripts and stylesheets with integrity attributes.",
+  "description": "A grunt task which hashes all scripts and stylesheets with integrity attributes.",
   "version": "1.0.0",
   "homepage": "https://github.com/sparanoid/grunt-sri-hash",
   "author": {
     "name": "Tunghsiao Liu",
     "email": "t@sparanoid.com"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/sparanoid/grunt-sri-hash.git"
