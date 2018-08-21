@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       if (scripts_dom.length) {
         scripts_dom.forEach((file) => {
           const url = file.getAttribute('src') || file.getAttribute('href');
-          const urlClean = url.replace(/\?.+$/, '');
+          const urlClean = url.replace(/\?(.+)?$/, '');
           const filePath = (urlClean.substr(0, 1) === '/') ? path.resolve(options.assetsDir, urlClean.substr(1)) : path.join(path.dirname(filePair.src.toString()), urlClean);
           const hash = getHash(filePath, options.algorithm);
 
