@@ -18,12 +18,11 @@ module.exports = function(grunt) {
       if (!hashMap.has(url)) {
         hashMap.set(url, [algorithm, calcHash(url, algorithm)].join('-'));
       }
-
       return hashMap.get(url);
     };
 
     const calcHash = (url, algorithm) => {
-      const fileContent = grunt.file.read(url).replace(/[.]{2}\//g);
+      const fileContent = grunt.file.read(url.replace(/[.]{2}\//g));
       // openssl dgst -sha384 -binary file.js | openssl base64 -A
       return crypto.createHash(algorithm).update(fileContent).digest('base64');
     };
