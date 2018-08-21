@@ -49,7 +49,12 @@ module.exports = function(grunt) {
           const filePath = (urlClean.substr(0, 1) === '/') ? path.resolve(options.assetsDir, urlClean.substr(1)) : path.join(path.dirname(filePair.src.toString()), urlClean);
           const hash = getHash(filePath, options.algorithm);
 
+          if (file.getAttribute('crossorigin') !== 'use-credentials') {
+            file.setAttribute('crossorigin', 'anonymous');
+          }
+
           file.setAttribute('integrity', hash);
+
           grunt.log.writeln(('  ' + hash + ': ').blue + filePath);
         })
       }
