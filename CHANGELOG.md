@@ -1,3 +1,17 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/sparanoid/grunt-sri-hash/compare/v1.0.2...v1.1.0) (2018-08-21)
+
+
+### Bug Fixes
+
+* **tasks:** typo causes wrong hash generated ([b57c830](https://github.com/sparanoid/grunt-sri-hash/commit/b57c830))
+
+### Features
+
+* remove extra query string ending with `?` ([4f590c3](https://github.com/sparanoid/grunt-sri-hash/commit/4f590c3))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/sparanoid/grunt-sri-hash/compare/v1.0.1...v1.0.2) (2018-08-21)
 
