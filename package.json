@@ -1,7 +1,7 @@
 {
   "name": "grunt-sri-hash",
   "description": "A grunt task which hashes all scripts and stylesheets with integrity attributes.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "homepage": "https://github.com/sparanoid/grunt-sri-hash",
   "author": {
     "name": "Tunghsiao Liu",
