@@ -27,87 +27,10 @@ module.exports = function(grunt) {
           'tmp/default_options.html': 'test/fixtures/index.html',
         },
       },
-      minify: {
-        options: {
-          minify: false,
-          inlineImg: false,
-          inlineSvg: false,
-          inlineSvgBase64: false
-        },
-        files: {
-          'tmp/minify.html': 'test/fixtures/index.html',
-        },
-      },
-      inline_img: {
-        options: {
-          minify: false,
-          inlineImg: true,
-          inlineSvg: false,
-          inlineSvgBase64: false
-        },
-        files: {
-          'tmp/inline_img.html': 'test/fixtures/index.html',
-        },
-      },
-      inline_svg: {
-        options: {
-          minify: false,
-          inlineImg: false,
-          inlineSvg: true,
-          inlineSvgBase64: false
-        },
-        files: {
-          'tmp/inline_svg.html': 'test/fixtures/index.html',
-        },
-      },
-      inline_svg_base64: {
-        options: {
-          minify: false,
-          inlineImg: false,
-          inlineSvg: true,
-          inlineSvgBase64: true
-        },
-        files: {
-          'tmp/inline_svg_base64.html': 'test/fixtures/index.html',
-        },
-      },
-      include_tag: {
-        options: {
-          minify: false,
-          inlineImg: false,
-          inlineSvg: false,
-          inlineSvgBase64: false,
-          includeTag: "?sri-hash"
-        },
-        files: {
-          'tmp/include_tag.html': 'test/fixtures/index.html',
-        },
-      },
-      size_limit: {
-        options: {
-          minify: false,
-          inlineImg: true,
-          inlineImgFileLimit: 40,
-          inlineSvg: true,
-          inlineSvgBase64: true,
-          inlineSvgFileLimit: 2
-        },
-        files: {
-          'tmp/size_limit.html': 'test/fixtures/index.html',
-        },
-      },
       all: {
         options: {
-          jsDir: "",
-          cssDir: "",
-          assetsDir: "",
-          minify: true,
-          inlineImg: true,
-          inlineSvg: true,
-          inlineSvgBase64: true,
-          inlineLinkTags: true,
-          includeTag: "",
-          assetsUrlPrefix: "/lab/test/"
+          algorithm: "sha512",
+          selector: 'script[src]:not([integrity]):not([src^="http"]):not([src^="//"])'
         },
         files: {
           'tmp/all.html': 'test/fixtures/index.html',
