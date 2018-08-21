@@ -1,7 +1,4 @@
 module.exports = function(grunt) {
-
-  'use strict';
-
   const crypto = require('crypto');
   const path = require('path');
   const jsdom = require('jsdom');
