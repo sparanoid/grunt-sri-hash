@@ -22,7 +22,8 @@ module.exports = function(grunt) {
     };
 
     const calcHash = (url, algorithm) => {
-      const fileContent = grunt.file.read(url.replace(/[.]{2}\//g));
+      const fileContent = grunt.file.read(url);
+
       // openssl dgst -sha384 -binary file.js | openssl base64 -A
       return crypto.createHash(algorithm).update(fileContent).digest('base64');
     };
