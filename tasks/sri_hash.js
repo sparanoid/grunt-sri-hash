@@ -14,6 +14,10 @@ module.exports = function(grunt) {
       assetsDir: '',
     });
 
+    const created = {
+      files: 0
+    };
+
     const calcHash = (url, algorithm) => {
       const fileContent = grunt.file.read(url);
 
@@ -36,8 +40,6 @@ module.exports = function(grunt) {
       const dom = new JSDOM(grunt.file.read(filePair.src));
       const doc = dom.window.document;
 
-      grunt.log.writeln(('Reading: ').green + path.resolve(filePair.src.toString()));
-
       const scripts_dom = doc.querySelectorAll(options.selector);
       if (scripts_dom.length) {
         scripts_dom.forEach((file) => {
@@ -52,14 +54,20 @@ module.exports = function(grunt) {
 
           file.setAttribute('integrity', hash);
 
-          grunt.log.writeln(('  ' + hash + ': ').blue + filePath);
+          grunt.verbose.writeln(('  ' + hash + ': ').blue + filePath);
         });
       }
 
       const html = dom.serialize();
       grunt.file.write(path.resolve(filePair.dest), html);
-      grunt.log.writeln(('Created: ').green + path.resolve(filePair.dest) + '\n');
+      created.files++;
     });
+
+    if (created.files > 0) {
+      grunt.log.ok(`${created.files} ${grunt.util.pluralize(this.files.length, 'file/files')} created, ${hashMap.size} ${grunt.util.pluralize(hashMap.size, 'hash/hashes')} generated.`);
+    } else {
+      grunt.log.warn('No files created.');
+    }
 
     hashMap.clear();
   });
