@@ -14,18 +14,18 @@ module.exports = function(grunt) {
       assetsDir: '',
     });
 
-    const getHash = (url, algorithm) => {
-      if (!hashMap.has(url)) {
-        hashMap.set(url, [algorithm, calcHash(url, algorithm)].join('-'));
-      }
-      return hashMap.get(url);
-    };
-
     const calcHash = (url, algorithm) => {
       const fileContent = grunt.file.read(url);
 
       // openssl dgst -sha384 -binary file.js | openssl base64 -A
       return crypto.createHash(algorithm).update(fileContent).digest('base64');
+    };
+
+    const getHash = (url, algorithm) => {
+      if (!hashMap.has(url)) {
+        hashMap.set(url, [algorithm, calcHash(url, algorithm)].join('-'));
+      }
+      return hashMap.get(url);
     };
 
     this.files.forEach((filePair) => {
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
           file.setAttribute('integrity', hash);
 
           grunt.log.writeln(('  ' + hash + ': ').blue + filePath);
-        })
+        });
       }
 
       const html = dom.serialize();
