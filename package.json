@@ -7,7 +7,9 @@
     "name": "Tunghsiao Liu",
     "email": "t@sparanoid.com"
   },
-  "contributors": [],
+  "contributors": [
+    "greenkeeper[bot] <greenkeeper[bot]@users.noreply.github.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/sparanoid/grunt-sri-hash.git"
