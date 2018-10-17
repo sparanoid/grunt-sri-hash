@@ -1,3 +1,14 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.1...v1.1.2) (2018-10-17)
+
+
+### Features
+
+* better hash output ([ae550ab](https://github.com/sparanoid/grunt-sri-hash/commit/ae550ab))
+* update test ([3943b8b](https://github.com/sparanoid/grunt-sri-hash/commit/3943b8b))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.0...v1.1.1) (2018-10-09)
 
