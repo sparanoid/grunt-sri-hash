@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 
     const created = {
       files: 0,
-      hashes: []
+      hashes: new Set()
     };
 
     const calcHash = (url, algorithm) => {
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
           }
 
           file.setAttribute('integrity', hash);
-          created.hashes.push(hash);
+          created.hashes.add(hash);
 
           grunt.verbose.writeln(('  ' + hash + ': ').blue + filePath);
         });
@@ -66,8 +66,7 @@ module.exports = function(grunt) {
     });
 
     if (created.files > 0) {
-      var uniq_hashes = [...new Set(created.hashes)];
-      grunt.log.ok(`${created.files} ${grunt.util.pluralize(this.files.length, 'file/files')} created, ${uniq_hashes.length} unique ${grunt.util.pluralize(uniq_hashes.length, 'hash/hashes')} generated.`);
+      grunt.log.ok(`${created.files} ${grunt.util.pluralize(this.files.length, 'file/files')} created, ${created.hashes.size} unique ${grunt.util.pluralize(created.hashes.size, 'hash/hashes')} generated.`);
     } else {
       grunt.log.warn('No files created.');
     }
