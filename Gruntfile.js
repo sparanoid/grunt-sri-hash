@@ -35,6 +35,14 @@ module.exports = function(grunt) {
         files: {
           'tmp/all.html': 'test/fixtures/index.html',
         },
+      },
+      empty: {
+        options: {
+          selector: 'nothing_select'
+        },
+        files: {
+          'tmp/empty.html': 'test/fixtures/index.html',
+        },
       }
     },
 
