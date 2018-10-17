@@ -44,5 +44,14 @@ exports.sri_hash = {
     test.equal(actual, expected, 'tests inline images');
 
     test.done();
+  },
+  empty: function(test){
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/empty.html');
+    var expected = grunt.file.read('test/expected/empty.html');
+    test.equal(actual, expected, 'no hashes should be generated');
+
+    test.done();
   }
 };
