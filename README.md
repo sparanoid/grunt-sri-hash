@@ -68,7 +68,7 @@ grunt.initConfig({
 
 #### `selector`
 
-Defaults to `link[rel=stylesheet][href]:not([integrity]):not([href^="http"]):not([href^="//"], script[src]:not([integrity]):not([src^="http"]):not([src^="//"])`.
+Defaults to `link[rel=stylesheet][href]:not([integrity]):not([href^="http"]):not([href^="//"]), script[src]:not([integrity]):not([src^="http"]):not([src^="//"])`.
 
 ```js
 
