@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
     const options = this.options({
       algorithm: 'sha384',
-      selector: 'link[rel=stylesheet][href]:not([integrity]):not([href^="http"]):not([href^="//"], script[src]:not([integrity]):not([src^="http"]):not([src^="//"])',
+      selector: 'link[rel=stylesheet][href]:not([integrity]):not([href^="http"]):not([href^="//"]), script[src]:not([integrity]):not([src^="http"]):not([src^="//"])',
       assetsDir: '',
     });
 
