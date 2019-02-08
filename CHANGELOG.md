@@ -1,3 +1,14 @@
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.2...v1.1.3) (2019-02-08)
+
+
+### Bug Fixes
+
+* **package:** update jsdom to version 13.0.0 ([5e64e6e](https://github.com/sparanoid/grunt-sri-hash/commit/5e64e6e))
+* **tasks:** typo in default selector ([74bc406](https://github.com/sparanoid/grunt-sri-hash/commit/74bc406))
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.1...v1.1.2) (2018-10-17)
 
