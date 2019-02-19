@@ -1,3 +1,13 @@
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.3...v1.1.4) (2019-02-19)
+
+
+### Bug Fixes
+
+* potential security vulnerability ([04bc82a](https://github.com/sparanoid/grunt-sri-hash/commit/04bc82a))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.2...v1.1.3) (2019-02-08)
 
