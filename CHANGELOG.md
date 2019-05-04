@@ -1,3 +1,18 @@
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.4...v1.1.5) (2019-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jsdom to v14 ([bb33de8](https://github.com/sparanoid/grunt-sri-hash/commit/bb33de8))
+* **deps:** update dependency jsdom to v15 ([04893cf](https://github.com/sparanoid/grunt-sri-hash/commit/04893cf))
+
+### Features
+
+* update deps ([8875122](https://github.com/sparanoid/grunt-sri-hash/commit/8875122))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/sparanoid/grunt-sri-hash/compare/v1.1.3...v1.1.4) (2019-02-19)
 
