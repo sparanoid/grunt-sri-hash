@@ -30,7 +30,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "jsdom": "^15.0.0"
+    "jsdom": "^16.0.0"
   },
   "devDependencies": {
     "grunt": "^1.0.4",
